@@ -1,0 +1,166 @@
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS & FIXES
+   ======================================== */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Hardware acceleration */
+.glass-card,
+.hero-image-card,
+.attraction-card,
+.program-detail,
+.sponsor-card,
+.tier-card {
+  transform: translateZ(0);
+  will-change: auto;
+}
+
+/* Optimize scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fix z-index layering */
+.particle-canvas {
+  z-index: 1 !important;
+}
+
+.hero-background,
+.shape {
+  z-index: 1 !important;
+}
+
+.hero-content,
+.section-content {
+  z-index: 100 !important;
+  position: relative;
+}
+
+.navbar {
+  z-index: 9998 !important;
+}
+
+.floating-register,
+.floating-back-to-top,
+.floating-social {
+  z-index: 9997 !important;
+}
+
+.scroll-progress-container {
+  z-index: 10000 !important;
+}
+
+.page-loader {
+  z-index: 10001 !important;
+}
+
+/* Improve text readability */
+h1, h2, h3, h4, h5, h6 {
+  text-rendering: optimizeLegibility;
+  font-weight: 700;
+}
+
+p, span, a, li {
+  text-rendering: optimizeSpeed;
+}
+
+/* Better contrast for cards */
+.glass-card {
+  background: rgba(30, 58, 138, 0.3) !important;
+  border: 2px solid rgba(124, 58, 237, 0.5) !important;
+}
+
+.glass-card:hover {
+  background: rgba(30, 58, 138, 0.4) !important;
+  border-color: rgba(236, 72, 153, 0.6) !important;
+}
+
+/* Section spacing fixes */
+section {
+  position: relative;
+  z-index: 10;
+  clear: both;
+}
+
+section + section {
+  margin-top: 0;
+}
+
+/* Prevent content overlap */
+.container {
+  position: relative;
+  z-index: 50;
+}
+
+/* Optimize images */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Reduce animation complexity on mobile */
+@media (max-width: 768px) {
+  .shape {
+    display: none;
+  }
+  
+  .tilt-card-wrapper {
+    perspective: none;
+  }
+  
+  .particle-canvas {
+    opacity: 0.2 !important;
+  }
+}
+
+/* Better button visibility */
+.glass-button {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.8), rgba(236, 72, 153, 0.8)) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(236, 72, 153, 0.4);
+  font-weight: 600;
+}
+
+.glass-button:hover {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 1), rgba(236, 72, 153, 1)) !important;
+  box-shadow: 0 6px 30px rgba(236, 72, 153, 0.6);
+}
+
+/* Fix countdown timer spacing */
+.countdown-container {
+  margin: 3rem auto;
+  max-width: 900px;
+  position: relative;
+  z-index: 100;
+}
+
+/* Improve form readability */
+input, textarea, select {
+  background: rgba(30, 58, 138, 0.3) !important;
+  border: 2px solid rgba(124, 58, 237, 0.5) !important;
+  color: white !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Fix footer overlap */
+.footer {
+  position: relative;
+  z-index: 50;
+  margin-top: 4rem;
+}

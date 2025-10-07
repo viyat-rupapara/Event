@@ -1,0 +1,344 @@
+.sangam {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.sangam::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(255, 215, 0, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(255, 107, 153, 0.1) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.sangam .container {
+  position: relative;
+  z-index: 1;
+}
+
+.sangam-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #1e3c72;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.sangam-showcase {
+  position: relative;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 237, 78, 0.1) 100%);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.showcase-image-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.showcase-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.showcase-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.sangam-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.sangam-info-item {
+  text-align: center;
+}
+
+.info-icon-large {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.sangam-info-item h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sangam-info-item p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.attractions-section {
+  margin-bottom: 4rem;
+}
+
+.attractions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.attraction-card {
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.attraction-image-container {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.attraction-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.attraction-card:hover .attraction-img {
+  transform: scale(1.1);
+}
+
+.attraction-icon-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.attraction-content {
+  padding: 1.5rem;
+}
+
+.attraction-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.attraction-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.attendees-section {
+  margin-bottom: 4rem;
+}
+
+.attendees-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+}
+
+.attendee-card {
+  padding: 2rem 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.attendee-card:hover {
+  transform: translateY(-8px) scale(1.05);
+}
+
+.attendee-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.attendee-card h5 {
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.ticketing-section {
+  margin-top: 4rem;
+}
+
+.tickets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.ticket-card {
+  padding: 3rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ticket-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.ticket-card.gold::before {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+}
+
+.ticket-card.silver::before {
+  background: linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 100%);
+}
+
+.ticket-card.free::before {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+}
+
+.ticket-badge {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.ticket-card.gold .ticket-badge {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+  color: #1e3c72;
+}
+
+.ticket-card.silver .ticket-badge {
+  background: linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 100%);
+  color: #1e3c72;
+}
+
+.ticket-card.free .ticket-badge.special {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+}
+
+.ticket-price {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ticket-note {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.ticket-benefits {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+
+.ticket-benefits li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.95rem;
+}
+
+.ticket-benefits li:last-child {
+  border-bottom: none;
+}
+
+.ticketing-cta {
+  text-align: center;
+}
+
+.ticketing-cta .glass-button {
+  font-size: 1.25rem;
+  padding: 1.25rem 3rem;
+}
+
+@media (max-width: 1024px) {
+  .sangam-info-grid,
+  .attractions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .attendees-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tickets-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .showcase-image-container {
+    height: 200px;
+  }
+
+  .sangam-info-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .attractions-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .attendees-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .tickets-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .ticket-card {
+    padding: 2rem 1.5rem;
+  }
+}
