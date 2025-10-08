@@ -9,52 +9,68 @@ const Programs = () => {
   const programs = {
     edp: {
       title: 'EDP (Entrepreneurship Development Program)',
-      stage: 'Idea to Initiation',
+      stage: 'For Idea-to-Initiation Stage',
       price: '₹3,000',
       hours: '30 Hours',
       icon: '💡',
       image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=400&fit=crop',
       gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      registration: 'Not Mandatory (DPIIT or Registered)',
       features: [
-        'Structured mentorship from industry experts',
-        'Ideation and validation workshops',
-        'MVP development guidance',
-        'Pitch deck creation and presentation skills',
-        'Market research and competitor analysis',
-        'Financial planning basics',
+        'Entrepreneurial Mindset & Idea Generation',
+        'Networking Skills & Personal Fit Analysis',
+        'Business Validation & Market Testing',
+        'Strategy, Resources & Execution Planning',
+        'Pitching, Scaling & Entrepreneurial Well-being',
+        'Design Thinking & Mind Mapping',
         'Free access to Startup Sangam 2025'
       ],
+      schedule: [
+        { day: 'Day 1', title: 'Foundation & Ideation', desc: 'Entrepreneurial Mindset, Idea Generation, Design Thinking & Mind Mapping' },
+        { day: 'Day 2', title: 'Networking & Analysis', desc: 'Networking Skills, Personal Fit Analysis & Market Testing - Aligning strengths with ideas' },
+        { day: 'Day 3', title: 'Validation & Testing', desc: 'Business Validation & Market Fit - Customer discovery, prototyping, assumption testing' },
+        { day: 'Day 4', title: 'Strategy & Planning', desc: 'Resources & Execution - Business models, financial feasibility, operational planning' },
+        { day: 'Day 5', title: 'Pitching & Growth', desc: 'Investor pitch preparation, growth strategy, meditation & yoga sessions' }
+      ],
       ideal: [
-        'Students with startup ideas',
-        'Innovators seeking structured mentorship',
-        'First-time founders',
-        'Anyone wanting to validate their business concept'
+        'Budding entrepreneurs with an idea or concept',
+        'Students with startup ideas seeking structured mentorship',
+        'First-time founders looking to validate their concept',
+        'Innovators wanting to start their entrepreneurial journey'
       ],
       output: 'MVP or Pitch-Ready Idea',
       mentoring: 'Ideation, Basics & Validation'
     },
     accelerator: {
       title: 'Accelerator Program',
-      stage: 'Early-Stage to Operational Startups',
+      stage: 'For Operational Startups Seeking Growth',
       price: '₹3,500',
       hours: '30 Hours',
       icon: '🚀',
       image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1200&h=400&fit=crop',
       gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+      registration: 'Preferably DPIIT or Registered',
       features: [
-        'Advanced scaling strategies',
-        'Investment readiness and fundraising',
-        'Revenue optimization techniques',
-        'Team building and leadership',
-        'Legal and compliance framework',
-        'Direct investor connections',
+        'Scaling Strategies & Team Building',
+        'Customer Acquisition & Growth Hacking',
+        'Financial Modeling & Revenue Planning',
+        'Legal Compliance & Intellectual Property',
+        'Pitch Design & Valuation Methods',
+        'Live Investor Interaction Sessions',
         'Free access to Startup Sangam 2025'
       ],
+      schedule: [
+        { day: 'Day 1', title: 'Scaling Foundations', desc: 'Scaling Strategies & Team Building for Operational Growth' },
+        { day: 'Day 2', title: 'Growth Tactics', desc: 'Customer Acquisition Tactics & Growth Hacking Tools' },
+        { day: 'Day 3', title: 'Financial Readiness', desc: 'Financial Modeling, Revenue Planning & Investment Readiness' },
+        { day: 'Day 4', title: 'Legal & Funding', desc: 'Legal Compliance, Intellectual Property & Fundraising Strategy' },
+        { day: 'Day 5', title: 'Investor Connect', desc: 'Pitch Design, Valuation Methods & Live Investor Interaction' }
+      ],
       ideal: [
-        'Registered startups (DPIIT preferred)',
-        'Entrepreneurs with revenue traction',
-        'Startups looking to raise funds',
-        'Businesses ready to scale operations'
+        'Existing startups in early growth or MVP stage',
+        'Registered startups with revenue traction',
+        'Entrepreneurs looking to raise funds or scale operations',
+        'Startups aiming to become fundable/scalable'
       ],
       output: 'Fundable/Scalable Startup Model',
       mentoring: 'Strategy, Scaling & Funding'
@@ -132,20 +148,43 @@ const Programs = () => {
             <div className="program-info-grid">
               <div className="info-box">
                 <h4>⏱️ Duration</h4>
-                <p>{selectedData.hours} Technical Sessions (7 hours/day)</p>
+                <p>{selectedData.hours} (7 hours/day)</p>
               </div>
               <div className="info-box">
                 <h4>🎯 Output</h4>
                 <p>{selectedData.output}</p>
               </div>
               <div className="info-box">
-                <h4>👨‍🏫 Mentoring Focus</h4>
+                <h4>� Registration</h4>
+                <p>{selectedData.registration}</p>
+              </div>
+              <div className="info-box">
+                <h4>�👨‍🏫 Mentoring Focus</h4>
                 <p>{selectedData.mentoring}</p>
               </div>
             </div>
 
             <div className="program-section">
-              <h4>✨ What You'll Learn</h4>
+              <h4>📅 5-Day Program Schedule</h4>
+              <div className="schedule-grid">
+                {selectedData.schedule.map((day, index) => (
+                  <motion.div
+                    key={index}
+                    className="schedule-card glass-card"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <div className="schedule-day">{day.day}</div>
+                    <h5>{day.title}</h5>
+                    <p>{day.desc}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            <div className="program-section">
+              <h4>✨ Key Learning Areas</h4>
               <ul className="features-list">
                 {selectedData.features.map((feature, index) => (
                   <motion.li
@@ -162,7 +201,7 @@ const Programs = () => {
             </div>
 
             <div className="program-section">
-              <h4>👥 Ideal For</h4>
+              <h4>👥 Who Should Join?</h4>
               <div className="ideal-grid">
                 {selectedData.ideal.map((item, index) => (
                   <motion.div

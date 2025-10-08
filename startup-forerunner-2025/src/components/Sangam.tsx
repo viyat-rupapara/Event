@@ -8,38 +8,50 @@ const Sangam = () => {
     {
       icon: '🎤',
       title: 'Keynote Address',
-      description: 'Industry icons and successful founders share their journey',
+      description: 'Hear from industry icons, successful founders, and unicorn founders sharing their entrepreneurial journey',
       image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=400&h=300&fit=crop'
     },
     {
       icon: '🏪',
-      title: 'Startup Exhibition',
-      description: 'Showcase your innovation with dedicated exhibition stalls',
+      title: 'Startup Exhibition Stalls',
+      description: 'Showcase your innovation with dedicated exhibition space and connect with potential customers',
       image: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=400&h=300&fit=crop'
     },
     {
       icon: '🏆',
-      title: 'Pitch Competition',
-      description: 'Compete for awards and recognition with your pitch deck',
+      title: 'Pitch Deck Competition & Awards',
+      description: 'Present your startup pitch and compete for prestigious awards and recognition',
       image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop'
     },
     {
       icon: '🤝',
-      title: 'Investor Networking',
-      description: 'Speed networking with Angel Investors and VCs',
+      title: 'Founder-Investor Speed Networking',
+      description: 'Direct access to Angel Investors, VCs, and funding opportunities through structured networking',
       image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=400&h=300&fit=crop'
     },
     {
       icon: '💼',
-      title: 'B2B Connect',
-      description: 'Exclusive lounge for business connections',
+      title: 'B2B Connect Lounge',
+      description: 'Exclusive executive lounge for high-value business connections and partnership opportunities',
       image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&h=300&fit=crop'
     },
     {
       icon: '🎭',
-      title: 'Cultural Night',
-      description: 'Entertainment evening with corporate dinner',
+      title: 'Cultural Night & Corporate Dinner',
+      description: 'Evening entertainment followed by networking dinner with industry leaders',
       image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=400&h=300&fit=crop'
+    },
+    {
+      icon: '✨',
+      title: 'Innovation Showcases',
+      description: 'Explore cutting-edge innovations and breakthrough technologies from startups',
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop'
+    },
+    {
+      icon: '🎯',
+      title: 'Startup Pitch Arena',
+      description: 'Live pitching arena where startups present to investors and get real-time feedback',
+      image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&h=300&fit=crop'
     }
   ];
 
@@ -75,7 +87,7 @@ const Sangam = () => {
           <div className="sangam-badge">🌟 Grand Finale</div>
           <h2>Startup Sangam 2025</h2>
           <p className="section-subtitle">
-            India's Largest Business Gathering & Networking Event - A Confluence of Ideas, Innovation & Investment
+            India's Biggest Business Networking Event - A Confluence of Ideas, Innovation & Investment with 3000+ participants from across India and beyond
           </p>
         </motion.div>
 
@@ -107,7 +119,7 @@ const Sangam = () => {
             <div className="sangam-info-item">
               <div className="info-icon-large">🏛️</div>
               <h4>Venue</h4>
-              <p>Haridarshan Auditorium<br/>Atmiya University</p>
+              <p>Gyanganga Convocation Hall<br/>Atmiya University</p>
             </div>
             <div className="sangam-info-item">
               <div className="info-icon-large">👥</div>
@@ -179,6 +191,14 @@ const Sangam = () => {
             <div className="attendee-card glass-card">
               <span className="attendee-icon">🌱</span>
               <h5>Ecosystem Builders</h5>
+            </div>
+            <div className="attendee-card glass-card">
+              <span className="attendee-icon">🚀</span>
+              <h5>Startup Founders</h5>
+            </div>
+            <div className="attendee-card glass-card">
+              <span className="attendee-icon">🎓</span>
+              <h5>Aspiring Entrepreneurs</h5>
             </div>
           </div>
         </motion.div>

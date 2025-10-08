@@ -126,11 +126,11 @@ const Hero = () => {
               <p>Program Tracks</p>
             </div>
             <div className="stat">
-              <h3><Counter end={200} suffix="+" /></h3>
+              <h3><Counter end={200} /></h3>
               <p>Seats per Track</p>
             </div>
             <div className="stat">
-              <h3><Counter end={30} suffix="+" /></h3>
+              <h3><Counter end={30} /></h3>
               <p>Hours Training</p>
             </div>
             <div className="stat">

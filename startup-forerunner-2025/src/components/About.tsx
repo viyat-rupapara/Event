@@ -76,7 +76,7 @@ const About = () => {
         >
           <h2>About the Event</h2>
           <p className="section-subtitle">
-            India's premier entrepreneurial gathering bringing together innovators, investors, and industry leaders
+            A dynamic startup week organized by Atmiya Innovations Foundation for aspiring founders, early-stage entrepreneurs, and scaling startups
           </p>
         </motion.div>
 
@@ -88,26 +88,28 @@ const About = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <p className="about-description">
-            Startup Forerunner 2025 is a transformative 5-day event designed to nurture entrepreneurial talent, 
-            validate startup ideas, and accelerate business growth. From ideation to funding, participants will 
-            receive comprehensive mentorship, technical training, and direct access to investors and industry experts.
+            <strong>Startup Forerunner 2025</strong> is a dynamic startup week designed to nurture entrepreneurial talent 
+            through intensive 5-day programs (EDP & Accelerator). The event provides comprehensive mentorship, technical 
+            training, and hands-on learning covering everything from ideation to funding. The week <strong>culminates in 
+            Startup Sangam 2025</strong> - India's largest business gathering with 3000+ participants including industrialists, 
+            investors, unicorn founders, and ecosystem builders.
           </p>
           
           <div className="about-highlights">
             <div className="highlight">
               <span className="highlight-icon">🎯</span>
               <h4>Mission</h4>
-              <p>Empower aspiring entrepreneurs with skills, mentorship, and resources to build successful startups</p>
+              <p>Empower aspiring entrepreneurs with structured mentorship, technical skills, and direct access to investors and industry leaders</p>
             </div>
             <div className="highlight">
               <span className="highlight-icon">🌟</span>
               <h4>Vision</h4>
-              <p>Create India's most impactful startup ecosystem gathering and networking platform</p>
+              <p>Build India's most comprehensive startup acceleration ecosystem that transforms ideas into fundable businesses</p>
             </div>
             <div className="highlight">
               <span className="highlight-icon">💎</span>
               <h4>Value</h4>
-              <p>Comprehensive training, investor connections, and peer networking worth thousands</p>
+              <p>Complete entrepreneurial journey - From idea validation to MVP development to direct investor connections</p>
             </div>
           </div>
         </motion.div>
